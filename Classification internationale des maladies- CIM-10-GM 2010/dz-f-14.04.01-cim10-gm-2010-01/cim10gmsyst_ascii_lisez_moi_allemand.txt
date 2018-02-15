@@ -1,0 +1,53 @@
+Lisez-moi de la version ASCII de la classification internationale des maladies ICD-10-GM 2010, index systématique, novembre 2010
+
+Editeur: Office fédéral de la statistique
+
+Traduction de la version allemande de la CIM-10-GM 2010 publiée par l'institut allemand pour la documentation et l’information médicale (DIMDI)
+
+Copyright: Office fédéral de la statistique (OFS), Neuchâtel 2010 - Version basée sur la CIM-10 de la WHO et la CIM-10-GM de 
+l’institut allemand pour la documentation et l’information médicale (DIMDI)
+
+	
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Description des variables de la version ASCII
+(cette partie sera traduite en français au plus vite; nous vous remercions pour votre compréhension)
+
+Zeichenvorrat        : UTF-8
+
+Spaltenstruktur      :
+Spalte 1             : hierarchische Ebene der Klassifikation
+                       0 = Kapitel
+                       1 = Gruppe
+                       2 = Untergruppe Ebene 1
+                       3 = Untergruppe Ebene 2
+                       4 = Dreisteller
+                       5 = Viersteller
+                       6 = Fünfsteller
+                       
+                       X = Beginn einer Subklassifikation
+                       V = vierte Stelle in einer Subklassifikation
+                       F = fünfte Stelle in einer Subklassifikation
+                       L = Leerzeile aus optischen Gründen
+                       P = neuer Absatz
+
+Spalte 2             : logisches Element der Klassifikation
+                       * = Übersicht der Sternschlüsselnummern eines Kapitels
+                       G = Gliederung eines Kapitels in Gruppen
+                       B = Benutze-Hinweise für zusätzliche Schlüsselnummern
+                       E = Exklusiva
+                       H = Hinweistext
+                       I = Inklusiva
+                       R = erklärender Text
+                       S = Siehe-Verweis auf Subklassifikation
+                       T = Basisinformation (Klassentitel, ggf. Schlüsselnummer)
+                       Z = Leerzeile aus optischen Gründen
+
+Spalte 3             : aus optischen Gründen leer
+
+Spalte 4             : hier beginnt der eigentliche Text der ICD-10
+
+
+Längere Fließtexte sind durch Leerzeilen gegliedert; diese sind nicht eigens durch "LZ" in Spalte 1 gekennzeichnet. Diese Kennzeichnung tritt im Wesentlichen innerhalb der eigentlichen Systematiken auf.
+----------------------------------------------------------------
+
