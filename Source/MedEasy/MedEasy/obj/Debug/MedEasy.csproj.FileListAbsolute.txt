@@ -1,0 +1,9 @@
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\bin\Debug\MedEasy.exe
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\bin\Debug\MedEasy.pdb
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\obj\Debug\MedEasy.csprojResolveAssemblyReference.cache
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\obj\Debug\MedEasyClient.MedEasy.resources
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\obj\Debug\MedEasy.Properties.Resources.resources
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\obj\Debug\MedEasy.csproj.GenerateResource.cache
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\obj\Debug\MedEasy.csproj.CoreCompileInputs.cache
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\obj\Debug\MedEasy.exe
+C:\Users\vincent.erbrich\source\repos\MedEasy\MedEasy\obj\Debug\MedEasy.pdb
