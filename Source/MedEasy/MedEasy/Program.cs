@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace MedEasyClientServer
+namespace MedEasy
 {
     static class Program
     {
@@ -15,7 +15,7 @@ namespace MedEasyClientServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MedEasy());
+            Application.Run(new Form_Main());
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace MedEasyClientServer
+﻿namespace MedEasy
 {
-    partial class MedEasy
+    partial class Form_Main
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -30,17 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // MedEasy
+            // Form_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(933, 519);
-            this.Enabled = false;
-            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "MedEasy";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MedEasy";
-            this.Load += new System.EventHandler(this.MedEasy_Load);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "Form_Main";
+            this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form_Main_Load);
             this.ResumeLayout(false);
 
         }

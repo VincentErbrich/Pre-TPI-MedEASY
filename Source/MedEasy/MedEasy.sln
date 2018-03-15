@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedEasy", "MedEasy\MedEasy.csproj", "{F7CC276C-9AF0-4F23-B146-6F8C7DBAC05E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedEasy", "MedEasy\MedEasy.csproj", "{2091BBBC-416D-46CE-A7C9-3F3E47AD4468}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F7CC276C-9AF0-4F23-B146-6F8C7DBAC05E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7CC276C-9AF0-4F23-B146-6F8C7DBAC05E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7CC276C-9AF0-4F23-B146-6F8C7DBAC05E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7CC276C-9AF0-4F23-B146-6F8C7DBAC05E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2091BBBC-416D-46CE-A7C9-3F3E47AD4468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2091BBBC-416D-46CE-A7C9-3F3E47AD4468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2091BBBC-416D-46CE-A7C9-3F3E47AD4468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2091BBBC-416D-46CE-A7C9-3F3E47AD4468}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {577B6DED-5C77-4F73-BF01-EBA7FFA5911F}
+		SolutionGuid = {C9D926D8-A552-42C2-A418-267354171374}
 	EndGlobalSection
 EndGlobal

@@ -7,19 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-
-namespace MedEasyClientServer
+namespace MedEasy
 {
-    public partial class MedEasy : Form
+    public partial class Form_Login : Form
     {
-        public MedEasy()
+        public Form_Login()
         {
             InitializeComponent();
         }
 
-        private void MedEasy_Load(object sender, EventArgs e)
+        private void Form_Login_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

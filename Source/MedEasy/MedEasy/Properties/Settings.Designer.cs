@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MedEasyClientServer.Properties
+namespace MedEasy.Properties
 {
 
 
