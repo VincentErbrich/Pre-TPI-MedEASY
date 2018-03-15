@@ -18,7 +18,16 @@ namespace MedEasy
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login login = new Login(txtUserName.Text, txtPassword.Text);
+            if(login.LoginIsCorrect())
+            {
+                MessageBox.Show("Félcitations");
+            }
         }
     }
 }
