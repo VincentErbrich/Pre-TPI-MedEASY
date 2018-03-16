@@ -39,10 +39,23 @@ namespace MedEasy
             {
                 Database_Manager db = new Database_Manager();
                 db.Connexion();
-                SQLiteDataReader results = db.SqlRequest("SELECT * FROM Utilisateurs WHERE USR_ID = '" + Username + "' AND " + "USR_Password = '" + Password + "'");
+                SQLiteDataReader results = db.SqlRequest("SELECT * FROM Utilisateurs WHERE USR_ID ='" + Username + "' AND " + "USR_Password ='" + Password + "'");
                 
                 if (results != null)
                 {
+                    int row = 0;
+                    string id;
+                    bool isadmin;
+                    // Vérifie qu'il y'ait quelque chose à lire 
+                    if (results.Read())
+                    {
+                        id = results.GetString(0);
+                        isadmin = results.GetValue(1);
+
+                        MessageBox.Show(id);
+                        CurrentUser.UserID = currentuser = new CurrentUser()
+                    }
+         
                     MessageBox.Show("Success");
                     return true;
                 }

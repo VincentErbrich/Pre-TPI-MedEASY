@@ -26,7 +26,7 @@ namespace MedEasy
             Login login = new Login(txtUserName.Text, txtPassword.Text);
             if(login.LoginIsCorrect())
             {
-                MessageBox.Show("Félcitations");
+                
             }
         }
     }

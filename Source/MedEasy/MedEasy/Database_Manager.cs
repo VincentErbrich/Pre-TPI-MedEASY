@@ -18,7 +18,7 @@ namespace MedEasy
      *  éxecute les requêtes SQL envers cette dernière. 
      *  Elle génère la dite base si elle est inexistante.
      *  
-     *  SOURCES / AIDES : Cyril Kalbfuss, inspiré de https://blog.tigrangasparian.com/2012/02/09/getting-started-with-sqlite-in-c-part-one/ et https://www.connectionstrings.com/sqlite/
+     *  SOURCES / AIDES : Remerciements à Cyril Kalbfuss, inspiré de https://blog.tigrangasparian.com/2012/02/09/getting-started-with-sqlite-in-c-part-one/ et https://www.connectionstrings.com/sqlite/
      */
     class Database_Manager
     {
@@ -50,7 +50,7 @@ namespace MedEasy
                 SQLiteCommand command = new SQLiteCommand("CREATE TABLE Utilisateurs (USR_ID VARCHAR(25) PRIMARY KEY NOT NULL, USR_Password VARCHAR(45) NOT NULL, USR_Nom VARCHAR(35), USR_Prenom VARCHAR(25), USR_EstAdmin BOOL NOT NULL, CONSTRAINT USR_ID_UNIQUE UNIQUE(USR_ID));", m_dbConnection);
                 //  La commande est executée sans demander de retour
                 command.ExecuteNonQuery();
-                command = new SQLiteCommand("INSERT INTO Utilisateurs ('USR_ID','USR_Password','USR_Nom','USR_Prenom','USR_EstAdmin') VALUES('admin', 'pass', 'Bon', 'Jean', 1);", m_dbConnection);
+                command = new SQLiteCommand("INSERT INTO Utilisateurs ('USR_ID','USR_Password','USR_Nom','USR_Prenom','USR_EstAdmin') VALUES('admin', 'pass', 'Bon', 'Jean', '1');", m_dbConnection);
                 command.ExecuteNonQuery();
                 //  La connexion est retournée et la méthode stoppée
                 return m_dbConnection;
@@ -58,7 +58,6 @@ namespace MedEasy
             else
             {
                 //  Si le fichier existe, éxecute ce code :
-
 
                 try
                 {
@@ -96,7 +95,7 @@ namespace MedEasy
             SQLiteCommand command = new SQLiteCommand(Request, Connexion());
             try
             {
-                //  La requête est executée sans demander de retour
+                //  La requête est executée
                 SQLiteDataReader reader = command.ExecuteReader();
                 //  Retourne le résultat de la requête
                 return reader;
