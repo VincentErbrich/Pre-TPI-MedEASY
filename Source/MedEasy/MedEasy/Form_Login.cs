@@ -18,7 +18,6 @@ namespace MedEasy
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -26,8 +25,18 @@ namespace MedEasy
             Login login = new Login(txtUserName.Text, txtPassword.Text);
             if(login.LoginIsCorrect())
             {
-                
+                Form Main = new Form_Main();
+                Main.Show();
+                Hide();
             }
+            else
+            {
+                MessageBox.Show("Nom d'utilisateur ou mot de passe incorrect");
+            }
+        }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

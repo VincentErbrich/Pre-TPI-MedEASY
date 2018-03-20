@@ -19,3 +19,4 @@ C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy
 C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy\obj\Debug\MedEasy.csproj.CopyComplete
 C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy\obj\Debug\MedEasy.exe
 C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy\obj\Debug\MedEasy.pdb
+C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy\obj\Debug\MedEasy.PanelCreationEnvironnement.resources

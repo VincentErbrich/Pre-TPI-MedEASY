@@ -16,27 +16,30 @@ namespace MedEasy
         {
             InitializeComponent();
         }
-
-        //Initialise le formulaire de login dès que la classe du formulaire principal est chargé
-        Form_Login frmlogin = new Form_Login();
-        Object currentuser = new Form_Login();
-        
-
+        private string CurrentPanel;
         private void Form_Main_Load(object sender, EventArgs e)
         {
-            //Montre le formulaire de login
-            //do
-            //{
-                frmlogin.Show();
-            //}
-            //while()
-            
-
+            lblCurrentUser.Text = CurrentUser.UserID;
+            PanelManager("RendezVous");
+        }
+        private void PanelManager(string paneltoshow)
+        {
+            switch (paneltoshow)
+            {
+                case "RendezVous" :
+                    HideAllPanels();
+                    pnlRendezvous.Visible = true;
+                    break;
+            }
+        }
+        private void HideAllPanels()
+        {
+            pnlRendezvous.Visible = false;
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void btnDeconnecter_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
     }
 }

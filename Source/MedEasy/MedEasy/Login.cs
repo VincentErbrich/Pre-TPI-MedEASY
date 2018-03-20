@@ -18,6 +18,8 @@ namespace MedEasy
         public string Username { get; set; }
         public string Password { get; set; }
 
+        public static bool isadmin;
+
         public Login(string user, string pass)
         {
             this.Username = user;
@@ -34,37 +36,39 @@ namespace MedEasy
                 return false;
 
             }
+            else if (string.IsNullOrEmpty(Password))
+            {
+                //Affiche un message d'erreur
+                MessageBox.Show("Veuillez entrer votre mot de passe");
+                return false;
+            }
             //Dans ce "else" on vérifie que le nom d'utilisateur soit correct
             else
             {
                 Database_Manager db = new Database_Manager();
                 db.Connexion();
-                SQLiteDataReader results = db.SqlRequest("SELECT * FROM Utilisateurs WHERE USR_ID ='" + Username + "' AND " + "USR_Password ='" + Password + "'");
-                
-                if (results != null)
+                SQLiteDataReader results = db.SqlRequest("SELECT * FROM 'Utilisateurs' WHERE USR_ID ='" + Username + "' AND " + "USR_Password ='" + Password + "'");
+                try
                 {
-                    int row = 0;
-                    string id;
-                    bool isadmin;
-                    // Vérifie qu'il y'ait quelque chose à lire 
-                    if (results.Read())
+                    while (results.Read())
                     {
-                        id = results.GetString(0);
-                        isadmin = results.GetValue(1);
-
-                        MessageBox.Show(id);
-                        CurrentUser.UserID = currentuser = new CurrentUser()
+                        // Sécurité supplémentaire, vérifie si le nom d'utilisateur et mot de passe sont corrects
+                        if (!results.GetValue(0).Equals(Username) || !results.GetValue(1).Equals(Password))
+                        {
+                            return false;
+                        }
+                        isadmin = (bool)results.GetValue(4);
+                        CurrentUser.IsAdmin = isadmin;
+                        CurrentUser.UserID = results.GetValue(0).ToString();
+                        return true;
                     }
-         
-                    MessageBox.Show("Success");
-                    return true;
                 }
-                else
+                catch (Exception)
                 {
                     return false;
                 }
+                return false;
             }
-
         }
-    }
+    }      
 }
