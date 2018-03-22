@@ -60,14 +60,18 @@ namespace MedEasy
                         isadmin = (bool)results.GetValue(4);
                         CurrentUser.IsAdmin = isadmin;
                         CurrentUser.UserID = results.GetValue(0).ToString();
-                        return true;
                     }
+                    return true;
+
                 }
                 catch (Exception)
                 {
                     return false;
                 }
-                return false;
+                finally
+                {
+                    results.Close();
+                }
             }
         }
     }      

@@ -38,13 +38,14 @@
             this.lblConnecte = new System.Windows.Forms.Label();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.pnlRendezvous = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tblRendezvous = new System.Windows.Forms.TableLayoutPanel();
             this.lblPatientactif = new System.Windows.Forms.Label();
             this.lblPatientactifage = new System.Windows.Forms.Label();
             this.btnDeconnecter = new System.Windows.Forms.Button();
             this.lblDeselectpatient = new System.Windows.Forms.Button();
             this.btnNotifs = new System.Windows.Forms.Button();
             this.btnSelectionnerpatient = new System.Windows.Forms.Button();
-            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.menuStrip1.SuspendLayout();
             this.pnlRendezvous.SuspendLayout();
             this.SuspendLayout();
@@ -71,6 +72,7 @@
             this.tsbtnRendezvous.Name = "tsbtnRendezvous";
             this.tsbtnRendezvous.Size = new System.Drawing.Size(86, 53);
             this.tsbtnRendezvous.Text = "Rendez Vous";
+            this.tsbtnRendezvous.Click += new System.EventHandler(this.tsbtnRendezvous_Click);
             // 
             // tscbxPatients
             // 
@@ -135,11 +137,43 @@
             // 
             // pnlRendezvous
             // 
-            this.pnlRendezvous.Controls.Add(this.vScrollBar1);
+            this.pnlRendezvous.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlRendezvous.Controls.Add(this.label1);
+            this.pnlRendezvous.Controls.Add(this.tblRendezvous);
             this.pnlRendezvous.Location = new System.Drawing.Point(0, 51);
             this.pnlRendezvous.Name = "pnlRendezvous";
             this.pnlRendezvous.Size = new System.Drawing.Size(1265, 530);
             this.pnlRendezvous.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(32, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(172, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Rendez-vous à venir";
+            // 
+            // tblRendezvous
+            // 
+            this.tblRendezvous.AutoSize = true;
+            this.tblRendezvous.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tblRendezvous.ColumnCount = 7;
+            this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblRendezvous.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
+            this.tblRendezvous.Location = new System.Drawing.Point(36, 53);
+            this.tblRendezvous.Name = "tblRendezvous";
+            this.tblRendezvous.RowCount = 1;
+            this.tblRendezvous.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tblRendezvous.Size = new System.Drawing.Size(1156, 100);
+            this.tblRendezvous.TabIndex = 1;
             // 
             // lblPatientactif
             // 
@@ -202,13 +236,6 @@
             this.btnSelectionnerpatient.Text = "Sélectionner";
             this.btnSelectionnerpatient.UseVisualStyleBackColor = true;
             // 
-            // vScrollBar1
-            // 
-            this.vScrollBar1.Location = new System.Drawing.Point(1246, 0);
-            this.vScrollBar1.Name = "vScrollBar1";
-            this.vScrollBar1.Size = new System.Drawing.Size(16, 530);
-            this.vScrollBar1.TabIndex = 0;
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -230,10 +257,12 @@
             this.Name = "Form_Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medical Management Made Easy";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Main_FormClosing);
             this.Load += new System.EventHandler(this.Form_Main_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.pnlRendezvous.ResumeLayout(false);
+            this.pnlRendezvous.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +285,8 @@
         private System.Windows.Forms.Button lblDeselectpatient;
         private System.Windows.Forms.Button btnNotifs;
         private System.Windows.Forms.Button btnSelectionnerpatient;
-        private System.Windows.Forms.VScrollBar vScrollBar1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel tblRendezvous;
     }
 }
 
