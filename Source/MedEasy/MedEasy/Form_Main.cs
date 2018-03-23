@@ -59,8 +59,11 @@ namespace MedEasy
                 {
                     for(int i = 1;  i <= results.StepCount; i++)
                     {
-                        Panel pnlActions = new Panel();
-
+                        DateTime rdvdateheure = (DateTime)results.GetValue(1);
+                        string rdvidpatient = results.GetValue(2).ToString();
+                        string rdvprenom = results.GetValue(3).ToString();
+                        string rdvnom = results.GetValue(4).ToString();
+                        int rdvid = results.GetInt32(5);
                         string rdvpremier;
                         if ((bool)results.GetValue(0) == true)
                         {
@@ -71,29 +74,27 @@ namespace MedEasy
                             rdvpremier = "Non";
                         }
 
-                        DateTime rdvdateheure = (DateTime)results.GetValue(1);
-                        string rdvidpatient = results.GetValue(2).ToString();
-                        string rdvprenom = results.GetValue(3).ToString();
-                        string rdvnom = results.GetValue(4).ToString();
-                        int rdvid = (int)results.GetValue(5);
-                        Button btnModifier = new AutoButton(rdvid);
+                        Button btnModifier = new Button();
+                        btnModifier.Name = string.Format("Bouton{0}", rdvid);
                         btnModifier.Text = "Modifier";
                         btnModifier.Click += new EventHandler(this.btnModifier_Click);
+                        Panel pnlActions = new Panel();
                         pnlActions.Controls.Add(btnModifier);
                         
-                        tblRendezvous.RowCount = tblRendezvous.RowCount + i;
-                        tblRendezvous.Controls.Add(new Label() { Text = rdvidpatient }, 0, tblRendezvous.RowCount - 1);
+                        tblRendezvous.RowCount = tblRendezvous.RowCount + 1;
+                        tblRendezvous.Controls.Add(new Label() { Text = rdvidpatient }, 0, tblRendezvous.RowCount -1);
                         tblRendezvous.Controls.Add(new Label() { Text = rdvnom }, 1, tblRendezvous.RowCount - 1);
                         tblRendezvous.Controls.Add(new Label() { Text = rdvprenom }, 2, tblRendezvous.RowCount - 1);
                         tblRendezvous.Controls.Add(new Label() { Text = rdvdateheure.ToString("yyyy-MM-dd") }, 3, tblRendezvous.RowCount - 1);
                         tblRendezvous.Controls.Add(new Label() { Text = rdvdateheure.ToString("HH:mm:ss") }, 4, tblRendezvous.RowCount - 1);
                         tblRendezvous.Controls.Add(new Label() { Text = rdvpremier }, 5, tblRendezvous.RowCount - 1);
-                        tblRendezvous.Controls.Add(pnlActions, column: 6, row: tblRendezvous.RowCount - 1);
+                        tblRendezvous.Controls.Add(pnlActions, 6, tblRendezvous.RowCount - 1);
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.Message);
                 return false;
             }
             finally
@@ -118,7 +119,8 @@ namespace MedEasy
         }
         private void btnModifier_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("En cours de développement", );
+            Button btn = (Button)sender;
+            MessageBox.Show(btn.Name);
         }
     }
 }

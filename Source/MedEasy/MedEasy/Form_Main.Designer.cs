@@ -167,12 +167,11 @@
             this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tblRendezvous.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tblRendezvous.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.tblRendezvous.Location = new System.Drawing.Point(36, 53);
             this.tblRendezvous.Name = "tblRendezvous";
             this.tblRendezvous.RowCount = 1;
-            this.tblRendezvous.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tblRendezvous.Size = new System.Drawing.Size(1156, 100);
+            this.tblRendezvous.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tblRendezvous.Size = new System.Drawing.Size(1156, 102);
             this.tblRendezvous.TabIndex = 1;
             // 
             // lblPatientactif
