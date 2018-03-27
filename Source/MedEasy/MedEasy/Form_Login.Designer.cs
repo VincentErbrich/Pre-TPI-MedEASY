@@ -44,7 +44,7 @@
             this.lblUserName.Location = new System.Drawing.Point(13, 9);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(253, 36);
+            this.lblUserName.Size = new System.Drawing.Size(135, 18);
             this.lblUserName.TabIndex = 0;
             this.lblUserName.Text = "Nom d\'utilisateur";
             // 
@@ -55,7 +55,7 @@
             this.lblPassword.Location = new System.Drawing.Point(13, 64);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(205, 36);
+            this.lblPassword.Size = new System.Drawing.Size(110, 18);
             this.lblPassword.TabIndex = 1;
             this.lblPassword.Text = "Mot de passe";
             // 
@@ -76,7 +76,7 @@
             this.txtUserName.Location = new System.Drawing.Point(210, 9);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(132, 37);
+            this.txtUserName.Size = new System.Drawing.Size(132, 22);
             this.txtUserName.TabIndex = 3;
             // 
             // txtPassword
@@ -84,7 +84,8 @@
             this.txtPassword.Location = new System.Drawing.Point(210, 64);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(132, 37);
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(132, 22);
             this.txtPassword.TabIndex = 4;
             // 
             // btnCancel
@@ -101,7 +102,7 @@
             // 
             // Form_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 168);
             this.ControlBox = false;

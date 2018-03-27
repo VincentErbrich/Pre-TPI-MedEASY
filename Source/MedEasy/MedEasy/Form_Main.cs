@@ -13,6 +13,7 @@ namespace MedEasy
 {
     public partial class Form_Main : Form
     {
+        public bool opened = true;
         public Form_Main()
         {
             InitializeComponent();
@@ -21,7 +22,9 @@ namespace MedEasy
         private void Form_Main_Load(object sender, EventArgs e)
         {
             lblCurrentUser.Text = CurrentUser.UserID;
+            this.dtpNaissance.MaxDate = DateTime.Now;
             BuildRendezvousTable();
+            PanelManager("RendezVous");
         }
         private void PanelManager(string paneltoshow)
         {
@@ -31,11 +34,20 @@ namespace MedEasy
                     HideAllPanels();
                     pnlRendezvous.Visible = true;
                     break;
+                case "NouveauPatient":
+                    HideAllPanels();
+                    pnlNouveauPatient.Visible = true;
+                    break;
+                default:
+                    HideAllPanels();
+                    pnlRendezvous.Visible = true;
+                    break;
             }
         }
         private void HideAllPanels()
         {
             pnlRendezvous.Visible = false;
+            pnlNouveauPatient.Visible = false;
         }
         private bool BuildRendezvousTable()
         {
@@ -54,7 +66,6 @@ namespace MedEasy
             SQLiteDataReader results = db.SqlRequest("SELECT C.CON_Premiere_Consultation, C.CON_Date_Heure, C.CON_PAT_FID, P.PAT_Prenom, P.PAT_Nom, C.CON_ID  FROM Consultation C LEFT JOIN Patient P ON C.CON_PAT_FID = P.PAT_ID WHERE C.CON_Visite_Effectuee = 'false' ORDER BY 'C.CON_DATE_HEURE';");
             try
             {
-                MessageBox.Show(results.StepCount.ToString());
                 while (results.Read())
                 {
                     for(int i = 1;  i <= results.StepCount; i++)
@@ -106,11 +117,15 @@ namespace MedEasy
         }
         private void btnDeconnecter_Click(object sender, EventArgs e)
         {
+            opened = false;
             Application.Restart();
         }
         private void Form_Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(0);
+            if(opened == true)
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void tsbtnRendezvous_Click(object sender, EventArgs e)
@@ -121,6 +136,37 @@ namespace MedEasy
         {
             Button btn = (Button)sender;
             MessageBox.Show(btn.Name);
+        }
+
+        private void tscbxPatients_TextChanged(object sender, EventArgs e)
+        {
+            if (tscbxPatients.Text == "Créer")
+            {
+                PanelManager("NouveauPatient");
+            }
+        }
+
+        private void btnAnnulerNvPat_Click(object sender, EventArgs e)
+        {
+            PanelManager("RendezVous");
+        }
+
+        private void btnConfirmerNvPat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Database_Manager db = new Database_Manager();
+                db.Connexion();
+                SQLiteDataReader results = db.SqlRequest("INSERT INTO Patients('PAT_Nom',  'PAT_Prenom',  'PAT_Date_Naissance',  'PAT_Titre',  'PAT_Etat_Civil',  'PAT_Origine',  'PAT_Adresse',  'PAT_Ville',  'PAT_Code_Postal',  'PAT_Canton',  'PAT_Telephone_Mobile',  'PAT_Telephone_Professionnel',  'PAT_Telephone_Urgence',  'PAT_Email',  'PAT_Emp_Titre',  'PAT_Emp_Adresse',  'PAT_Emp_Canton',  'PAT_Emp_Ville',  'PAT_Emp_Code_Postal',  'PAT_Emp_Pays',  'PAT_Ass_Numero_Avs',  'PAT_Ass_Numero_Carte',  'PAT_Ass_Numero_OFSP',  'PAT_Ass_Institution',  'PAT_Ass_Police') VALUES(" + txtNom.Text.Trim() + ", " + txtPrenom.Text.Trim() + " " + txtPrenom2.Text.Trim() + ", " + dtpNaissance.ToString() + ", " + cbxTitre.SelectedItem.ToString() + ", " + cbxEtatCivil.SelectedItem.ToString() + ", " + txtOrigine.Text.Trim() 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Une erreur est survenue durant la création du patient\n" + ex.Message);
+            }
+            finally
+            {
+
+            }
         }
     }
 }
