@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Main));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsbtnRendezvous = new System.Windows.Forms.ToolStripMenuItem();
@@ -103,9 +104,14 @@
             this.lblEtatCivil = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.ttpARemplir = new System.Windows.Forms.ToolTip(this.components);
+            this.pnlPatients = new System.Windows.Forms.Panel();
+            this.lblListePatients = new System.Windows.Forms.Label();
+            this.tblPatients = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1.SuspendLayout();
             this.pnlRendezvous.SuspendLayout();
             this.pnlNouveauPatient.SuspendLayout();
+            this.pnlPatients.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -137,7 +143,7 @@
             // 
             this.tscbxPatients.Items.AddRange(new object[] {
             "Créer",
-            "Liste / Recherche"});
+            "Liste"});
             this.tscbxPatients.Margin = new System.Windows.Forms.Padding(14, 0, 1, 0);
             this.tscbxPatients.Name = "tscbxPatients";
             this.tscbxPatients.Size = new System.Drawing.Size(151, 53);
@@ -231,8 +237,8 @@
             this.tblRendezvous.Location = new System.Drawing.Point(36, 53);
             this.tblRendezvous.Name = "tblRendezvous";
             this.tblRendezvous.RowCount = 1;
-            this.tblRendezvous.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 104F));
-            this.tblRendezvous.Size = new System.Drawing.Size(1156, 108);
+            this.tblRendezvous.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tblRendezvous.Size = new System.Drawing.Size(1156, 112);
             this.tblRendezvous.TabIndex = 1;
             // 
             // lblPatientactif
@@ -969,11 +975,52 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Créer un nouveau Patient";
             // 
+            // pnlPatients
+            // 
+            this.pnlPatients.AutoScroll = true;
+            this.pnlPatients.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPatients.Controls.Add(this.lblListePatients);
+            this.pnlPatients.Controls.Add(this.tblPatients);
+            this.pnlPatients.Location = new System.Drawing.Point(0, 51);
+            this.pnlPatients.Name = "pnlPatients";
+            this.pnlPatients.Size = new System.Drawing.Size(1265, 556);
+            this.pnlPatients.TabIndex = 60;
+            // 
+            // lblListePatients
+            // 
+            this.lblListePatients.AutoSize = true;
+            this.lblListePatients.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblListePatients.Location = new System.Drawing.Point(32, 10);
+            this.lblListePatients.Name = "lblListePatients";
+            this.lblListePatients.Size = new System.Drawing.Size(152, 20);
+            this.lblListePatients.TabIndex = 2;
+            this.lblListePatients.Text = "Liste des patients";
+            // 
+            // tblPatients
+            // 
+            this.tblPatients.AutoSize = true;
+            this.tblPatients.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
+            this.tblPatients.ColumnCount = 5;
+            this.tblPatients.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblPatients.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblPatients.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblPatients.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblPatients.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tblPatients.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPatients.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblPatients.Location = new System.Drawing.Point(36, 53);
+            this.tblPatients.Name = "tblPatients";
+            this.tblPatients.RowCount = 1;
+            this.tblPatients.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tblPatients.Size = new System.Drawing.Size(1156, 112);
+            this.tblPatients.TabIndex = 1;
+            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1265, 606);
+            this.Controls.Add(this.pnlPatients);
             this.Controls.Add(this.pnlNouveauPatient);
             this.Controls.Add(this.btnSelectionnerpatient);
             this.Controls.Add(this.btnNotifs);
@@ -999,6 +1046,8 @@
             this.pnlRendezvous.PerformLayout();
             this.pnlNouveauPatient.ResumeLayout(false);
             this.pnlNouveauPatient.PerformLayout();
+            this.pnlPatients.ResumeLayout(false);
+            this.pnlPatients.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1080,6 +1129,10 @@
         private System.Windows.Forms.Label lblEtatCivil;
         private System.Windows.Forms.Label lblNom;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolTip ttpARemplir;
+        private System.Windows.Forms.Panel pnlPatients;
+        private System.Windows.Forms.Label lblListePatients;
+        private System.Windows.Forms.TableLayoutPanel tblPatients;
     }
 }
 

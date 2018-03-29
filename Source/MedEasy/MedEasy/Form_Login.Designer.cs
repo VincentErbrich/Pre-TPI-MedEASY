@@ -69,6 +69,7 @@
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "S\'identifier";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseWaitCursor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtUserName
