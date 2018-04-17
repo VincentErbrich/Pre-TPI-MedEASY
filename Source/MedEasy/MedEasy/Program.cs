@@ -16,6 +16,7 @@ namespace MedEasy
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Login());
+            PanelCreationEnvironnement cre = new PanelCreationEnvironnement();
             Object currentuser = new CurrentUser();
         }
     }

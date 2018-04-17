@@ -18,8 +18,6 @@ namespace MedEasy
 
         private void Form_Login_Load(object sender, EventArgs e)
         {
-            //PanelCreationEnvironnement panel = new PanelCreationEnvironnement();
-            //panel.Show();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

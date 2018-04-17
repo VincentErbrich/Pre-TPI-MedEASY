@@ -46,22 +46,25 @@ namespace MedEasy
             else
             {
                 Database_Manager db = new Database_Manager();
-                db.Connexion();
-                SQLiteDataReader results = db.SqlRequest("SELECT * FROM 'Utilisateurs' WHERE USR_ID ='" + Username + "' AND " + "USR_Password ='" + Password + "'");
+                SQLiteDataReader results = db.SqlRequest("SELECT * FROM Utilisateurs WHERE USR_ID ='" + Username + "' AND " + "USR_Password ='" + Password + "';");
                 try
                 {
                     while (results.Read())
                     {
                         // Sécurité supplémentaire, vérifie si le nom d'utilisateur et mot de passe sont corrects
-                        if (!results.GetValue(0).Equals(Username) || !results.GetValue(1).Equals(Password))
+                        if (results.GetValue(0).Equals(Username) || results.GetValue(1).Equals(Password))
+                        {
+                            isadmin = (bool)results.GetValue(4);
+                            CurrentUser.IsAdmin = isadmin;
+                            CurrentUser.UserID = results.GetValue(0).ToString();
+                            return true;
+                        }
+                        else
                         {
                             return false;
                         }
-                        isadmin = (bool)results.GetValue(4);
-                        CurrentUser.IsAdmin = isadmin;
-                        CurrentUser.UserID = results.GetValue(0).ToString();
                     }
-                    return true;
+                        return false;
 
                 }
                 catch (Exception)
@@ -70,8 +73,9 @@ namespace MedEasy
                 }
                 finally
                 {
-                    results.Close();
+                    if (results != null) results.Close();
                 }
+                    
             }
         }
     }      
