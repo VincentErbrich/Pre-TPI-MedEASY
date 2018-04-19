@@ -67,7 +67,11 @@ namespace MedEasy
                             return false;
                         }
                     }
+<<<<<<< HEAD
                     return false;
+=======
+                        return false;
+>>>>>>> 0d5f14ff3ffaf6c1c30bc9f98d2b7444eed1cfa3
 
                 }
                 catch (Exception)
@@ -76,9 +80,15 @@ namespace MedEasy
                 }
                 finally
                 {
+<<<<<<< HEAD
                     results.Close(); //Ferme le SQLiteDataReader quand la vérification des identifiants est terminée
                 }
 
+=======
+                    if (results != null) results.Close();
+                }
+                    
+>>>>>>> 0d5f14ff3ffaf6c1c30bc9f98d2b7444eed1cfa3
             }
         }
     }
