@@ -16,5 +16,14 @@ namespace MedEasy
             InitializeComponent();
         }
 
+        private void btnSelectionnerPatient_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelCreationEnvironnement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

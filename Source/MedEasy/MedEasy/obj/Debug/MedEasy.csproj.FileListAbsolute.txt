@@ -20,3 +20,41 @@ C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy
 C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy\obj\Debug\MedEasy.exe
 C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy\obj\Debug\MedEasy.pdb
 C:\Users\vincent.erbrich\Documents\GitHub\Pre-TPI-MedEASY\Source\MedEasy\MedEasy\obj\Debug\MedEasy.PanelCreationEnvironnement.resources
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\MedEasy.exe.config
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\MedEasy.exe
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\MedEasy.pdb
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\EntityFramework.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\System.Data.SQLite.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\EntityFramework.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\System.Data.SQLite.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.csprojResolveAssemblyReference.cache
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.Form_Login.resources
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.Form_Main.resources
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.PanelCreationEnvironnement.resources
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.Properties.Resources.resources
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.csproj.GenerateResource.cache
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.csproj.CoreCompileInputs.cache
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.csproj.CopyComplete
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.exe
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\obj\Debug\MedEasy.pdb
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\itextsharp.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\itextsharp.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\Invoicer.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\MigraDoc.DocumentObjectModel.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\MigraDoc.Rendering.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\PdfSharp.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\PdfSharp.Charting.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\Invoicer.pdb
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\MigraDoc.DocumentObjectModel.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\MigraDoc.Rendering.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\PdfSharp.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\PdfSharp.Charting.xml
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\de\MigraDoc.DocumentObjectModel.resources.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\de\MigraDoc.Rendering.resources.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\Vincent ERBRICH\Desktop\MedEasy\MedEasy\bin\Debug\de\PdfSharp.Charting.resources.dll
